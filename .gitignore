@@ -14,27 +14,17 @@ node_modules
 dist
 build
 out
-/.next/
-/out/
-/build/
-/dist/
-.vinxi
-.output
 .react-router/
 .tanstack/
-.nitro/
 *.tsbuildinfo
-next-env.d.ts
+dev-dist
 
 # Environment variables
 .env
 .env*.local
-.env*
 !.env.example
 .dev.vars
 .dev.vars*
-.production
-.DS_Store
 *.pem
 
 # IDEs and editors
@@ -54,7 +44,6 @@ next-env.d.ts
 
 # Logs
 logs
-logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -63,18 +52,9 @@ lerna-debug.log*
 .pnpm-debug.log*
 pnpm-debug.log*
 report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
-_.log
-
-# Turbo
-.turbo
 
 # Build tools
 .turbo
-.wrangler
-.alchemy
-.open-next
-.vercel
-.netlify
 
 # Testing
 coverage
@@ -83,18 +63,13 @@ coverage
 
 # Misc
 *.tgz
-.cache
 tmp
 temp
 *.db*
-dev-dist
 
 # Cargo (Rust)
 /target/
 /gen/schemas
-
-# Prisma
-/prisma/generated
 
 # Deployment
 .vercel
@@ -102,9 +77,9 @@ dev-dist
 
 # Caches
 .eslintcache
-.cache
 
-# Finder (MacOS) folder config
+# macOS
 .DS_Store
 
+# Exclude website directory
 _website/*
