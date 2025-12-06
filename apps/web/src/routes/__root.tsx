@@ -11,6 +11,7 @@ import Header from "../components/header";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { formDevtoolsPlugin } from "@tanstack/react-form-devtools";
 
 import appCss from "../index.css?url";
 
@@ -69,6 +70,7 @@ function RootDocument() {
 							render: <TanStackRouterDevtoolsPanel />,
 							defaultOpen: false,
 						},
+						formDevtoolsPlugin(),
 					]}
 				/>
 

@@ -8,7 +8,11 @@ import { devtools } from "@tanstack/devtools-vite";
 
 export default defineConfig({
 	plugins: [
-		devtools(),
+		devtools({
+			eventBusConfig: {
+				port: 42069,
+			},
+		}),
 		tsconfigPaths(),
 		tailwindcss(),
 		tanstackStart(),

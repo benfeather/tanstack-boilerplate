@@ -15,6 +15,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { formDevtoolsPlugin } from "@tanstack/react-form-devtools";
 
 import "../index.css";
 
@@ -78,6 +79,7 @@ function RootComponent() {
 						render: <TanStackRouterDevtoolsPanel />,
 						defaultOpen: false,
 					},
+					formDevtoolsPlugin(),
 				]}
 			/>
 		</>
