@@ -9,13 +9,13 @@
 		]
 	},
 	"scripts": {
-		"check": "biome check --write .",
-		"dev": "turbo dev",
 		"build": "turbo build",
+		"check": "biome check --write .",
 		"check-types": "turbo check-types",
-		"dev:native": "turbo --filter native dev",
-		"dev:web": "turbo --filter web dev",
+		"dev": "turbo dev",
+		"dev:mobile": "turbo --filter mobile dev",
 		"dev:server": "turbo --filter server dev",
+		"dev:web": "turbo --filter web dev",
 		"db:push": "turbo --filter @workspace/db db:push",
 		"db:studio": "turbo --filter @workspace/db db:studio",
 		"db:generate": "turbo --filter @workspace/db db:generate",
