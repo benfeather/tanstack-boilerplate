@@ -21,6 +21,7 @@ export interface RouterAppContext {
 }
 
 export const Route = createRootRouteWithContext<RouterAppContext>()({
+  component: RootDocument,
   head: () => ({
     meta: [
       {
@@ -41,8 +42,6 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
       },
     ],
   }),
-
-  component: RootDocument,
 })
 
 function RootDocument() {
@@ -56,6 +55,7 @@ function RootDocument() {
           <Header />
           <Outlet />
         </div>
+
         <Toaster richColors />
 
         <TanStackDevtools
