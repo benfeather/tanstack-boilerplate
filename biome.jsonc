@@ -14,7 +14,8 @@
 	},
 
 	"files": {
-		"ignoreUnknown": false
+		"ignoreUnknown": false,
+		"includes": ["**", "!**/routeTree.gen.ts", "!**/src-tauri"]
 	},
 
 	"formatter": {

@@ -1,61 +1,61 @@
-import { Link, useNavigate } from "@tanstack/react-router";
-import { Button } from "@workspace/client/components/button";
+import { Link, useNavigate } from '@tanstack/react-router'
+import { Button } from '@workspace/client/components/button'
 import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuLabel,
-	DropdownMenuSeparator,
-	DropdownMenuTrigger,
-} from "@workspace/client/components/dropdown-menu";
-import { Skeleton } from "@workspace/client/components/skeleton";
-import { authClient } from "@workspace/client/utils/auth-client";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@workspace/client/components/dropdown-menu'
+import { Skeleton } from '@workspace/client/components/skeleton'
+import { authClient } from '@workspace/client/utils/auth-client'
 
 export default function UserMenu() {
-	const navigate = useNavigate();
-	const { data: session, isPending } = authClient.useSession();
+  const navigate = useNavigate()
+  const { data: session, isPending } = authClient.useSession()
 
-	if (isPending) {
-		return <Skeleton className="h-9 w-24" />;
-	}
+  if (isPending) {
+    return <Skeleton className="h-9 w-24" />
+  }
 
-	if (!session) {
-		return (
-			<Button variant="outline" asChild>
-				<Link to="/login">Sign In</Link>
-			</Button>
-		);
-	}
+  if (!session) {
+    return (
+      <Button variant="outline" asChild>
+        <Link to="/login">Sign In</Link>
+      </Button>
+    )
+  }
 
-	return (
-		<DropdownMenu>
-			<DropdownMenuTrigger asChild>
-				<Button variant="outline">{session.user.name}</Button>
-			</DropdownMenuTrigger>
-			<DropdownMenuContent className="bg-card">
-				<DropdownMenuLabel>My Account</DropdownMenuLabel>
-				<DropdownMenuSeparator />
-				<DropdownMenuItem>{session.user.email}</DropdownMenuItem>
-				<DropdownMenuItem asChild>
-					<Button
-						variant="destructive"
-						className="w-full"
-						onClick={() => {
-							authClient.signOut({
-								fetchOptions: {
-									onSuccess: () => {
-										navigate({
-											to: "/",
-										});
-									},
-								},
-							});
-						}}
-					>
-						Sign Out
-					</Button>
-				</DropdownMenuItem>
-			</DropdownMenuContent>
-		</DropdownMenu>
-	);
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">{session.user.name}</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="bg-card">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>{session.user.email}</DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Button
+            variant="destructive"
+            className="w-full"
+            onClick={() => {
+              authClient.signOut({
+                fetchOptions: {
+                  onSuccess: () => {
+                    navigate({
+                      to: '/',
+                    })
+                  },
+                },
+              })
+            }}
+          >
+            Sign Out
+          </Button>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
 }
