@@ -6,10 +6,10 @@ import {
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { authClient } from "@/lib/auth-client";
-import { Button } from "./ui/button";
-import { Skeleton } from "./ui/skeleton";
+} from "@workspace/client/components/dropdown-menu";
+import { authClient } from "@workspace/client/utils/auth-client";
+import { Button } from "@workspace/client/components/button";
+import { Skeleton } from "@workspace/client/components/skeleton";
 
 export default function UserMenu() {
 	const navigate = useNavigate();

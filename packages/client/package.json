@@ -1,0 +1,31 @@
+{
+	"name": "@workspace/client",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./auth/*": {
+			"default": "./src/auth/*.ts"
+		},
+		"./components/*": {
+			"default": "./src/components/*.tsx"
+		},
+		"./hooks/*": {
+			"default": "./src/hooks/*.ts"
+		},
+		"./utils/*": {
+			"default": "./src/utils/*.ts"
+		}
+	},
+	"devDependencies": {
+		"@workspace/config": "workspace:*"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@workspace/api": "workspace:*",
+		"@workspace/auth": "workspace:*"
+	}
+}

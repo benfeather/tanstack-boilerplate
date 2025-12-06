@@ -9,7 +9,8 @@
 	},
 	"dependencies": {
 		"@workspace/api": "workspace:*",
-		"@workspace/auth": "workspace:*"
+		"@workspace/auth": "workspace:*",
+		"@workspace/client": "workspace:*"
 	},
 	"devDependencies": {
 		"@workspace/config": "workspace:*"

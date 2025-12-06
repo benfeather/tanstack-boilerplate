@@ -12,8 +12,8 @@ import type { AppRouterClient } from "@workspace/api/routers/index";
 import { useState } from "react";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
-import { link, type orpc } from "@/utils/orpc";
+import { Toaster } from "@workspace/client/components/sonner";
+import { link, type orpc } from "@workspace/client/utils/orpc";
 import "../index.css";
 
 export interface RouterAppContext {

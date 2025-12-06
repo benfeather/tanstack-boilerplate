@@ -9,8 +9,8 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { Toaster } from "@/components/ui/sonner";
-import type { orpc } from "@/utils/orpc";
+import { Toaster } from "@workspace/client/components/sonner";
+import type { orpc } from "@workspace/client/utils/orpc";
 import Header from "../components/header";
 import appCss from "../index.css?url";
 export interface RouterAppContext {

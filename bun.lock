@@ -66,6 +66,7 @@
       "dependencies": {
         "@workspace/api": "workspace:*",
         "@workspace/auth": "workspace:*",
+        "@workspace/client": "workspace:*",
       },
       "devDependencies": {
         "@workspace/config": "workspace:*",
@@ -87,6 +88,7 @@
       "dependencies": {
         "@workspace/api": "workspace:*",
         "@workspace/auth": "workspace:*",
+        "@workspace/client": "workspace:*",
       },
       "devDependencies": {
         "@workspace/config": "workspace:*",
@@ -109,6 +111,19 @@
       "name": "@workspace/auth",
       "dependencies": {
         "@workspace/db": "workspace:*",
+      },
+      "devDependencies": {
+        "@workspace/config": "workspace:*",
+      },
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+    "packages/client": {
+      "name": "@workspace/client",
+      "dependencies": {
+        "@workspace/api": "workspace:*",
+        "@workspace/auth": "workspace:*",
       },
       "devDependencies": {
         "@workspace/config": "workspace:*",
@@ -720,6 +735,8 @@
     "@workspace/api": ["@workspace/api@workspace:packages/api"],
 
     "@workspace/auth": ["@workspace/auth@workspace:packages/auth"],
+
+    "@workspace/client": ["@workspace/client@workspace:packages/client"],
 
     "@workspace/config": ["@workspace/config@workspace:packages/config"],
 
