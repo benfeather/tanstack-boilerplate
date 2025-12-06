@@ -1,5 +1,5 @@
-import { cn } from '@workspace/client/utils/class-name'
 import type * as React from 'react'
+import { cn } from 'tailwind-variants'
 
 function Card({ className, ...props }: React.ComponentProps<'div'>) {
   return (

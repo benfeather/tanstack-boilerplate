@@ -1,4 +1,4 @@
-import { cn } from '@workspace/client/utils/class-name'
+import { cn } from 'tailwind-variants'
 
 function Skeleton({ className, ...props }: React.ComponentProps<'div'>) {
   return (

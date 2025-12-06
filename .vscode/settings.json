@@ -1,3 +1,4 @@
 {
-	"cSpell.words": ["orpc", "tauri"]
+	"cSpell.words": ["orpc", "tauri"],
+	"tailwindCSS.classFunctions": ["tv"]
 }

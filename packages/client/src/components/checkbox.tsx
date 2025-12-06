@@ -1,4 +1,4 @@
-import { cn } from '@workspace/client/utils/class-name'
+import { cn } from 'tailwind-variants'
 import { CheckIcon } from 'lucide-react'
 import { Checkbox as CheckboxPrimitive } from 'radix-ui'
 import type * as React from 'react'

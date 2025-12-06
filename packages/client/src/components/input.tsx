@@ -1,4 +1,4 @@
-import { cn } from '@workspace/client/utils/class-name'
+import { cn } from 'tailwind-variants'
 import type * as React from 'react'
 
 function Input({ className, type, ...props }: React.ComponentProps<'input'>) {
