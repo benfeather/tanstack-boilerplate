@@ -1,0 +1,17 @@
+{
+	"name": "web",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"serve": "vite preview",
+		"dev": "vite dev --port=3001"
+	},
+	"dependencies": {
+		"@workspace/api": "workspace:*",
+		"@workspace/auth": "workspace:*"
+	},
+	"devDependencies": {
+		"@workspace/config": "workspace:*"
+	}
+}
