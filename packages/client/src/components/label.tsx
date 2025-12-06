@@ -1,7 +1,6 @@
+import { cn } from "@workspace/client/utils/class-name";
 import { Label as LabelPrimitive } from "radix-ui";
 import type * as React from "react";
-
-import { cn } from "@workspace/client/utils/class-name";
 
 function Label({
 	className,

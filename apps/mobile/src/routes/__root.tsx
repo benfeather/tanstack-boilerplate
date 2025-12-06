@@ -9,11 +9,11 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import type { AppRouterClient } from "@workspace/api/routers/index";
+import { Toaster } from "@workspace/client/components/sonner";
+import { link, type orpc } from "@workspace/client/utils/orpc";
 import { useState } from "react";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@workspace/client/components/sonner";
-import { link, type orpc } from "@workspace/client/utils/orpc";
 import "../index.css";
 
 export interface RouterAppContext {

@@ -1,8 +1,7 @@
+import { cn } from "@workspace/client/utils/class-name";
 import { CheckIcon } from "lucide-react";
 import { Checkbox as CheckboxPrimitive } from "radix-ui";
 import type * as React from "react";
-
-import { cn } from "@workspace/client/utils/class-name";
 
 function Checkbox({
 	className,
