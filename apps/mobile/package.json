@@ -4,14 +4,13 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "vite --port=3001",
 		"build": "vite build",
-		"serve": "vite preview",
-		"start": "vite",
+		"build:ios": "tauri ios build",
+		"build:android": "tauri android build",
 		"check-types": "tsc --noEmit",
-		"tauri": "tauri",
-		"desktop:dev": "tauri dev",
-		"desktop:build": "tauri build"
+		"dev": "vite --port=3001",
+		"dev:ios": "tauri ios dev",
+		"dev:android": "tauri android dev"
 	},
 	"dependencies": {
 		"@workspace/api": "workspace:*",
