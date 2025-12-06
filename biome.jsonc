@@ -1,37 +1,26 @@
 {
-	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"vcs": {
-		"enabled": false,
-		"clientKind": "git",
-		"useIgnoreFile": false
-	},
-	"files": {
-		"ignoreUnknown": false,
-		"includes": [
-			"**",
-			"!**/.next",
-			"!**/dist",
-			"!**/.turbo",
-			"!**/dev-dist",
-			"!**/.zed",
-			"!**/.vscode",
-			"!**/routeTree.gen.ts",
-			"!**/src-tauri",
-			"!**/.nuxt",
-			"!bts.jsonc",
-			"!**/.expo",
-			"!**/.wrangler",
-			"!**/.alchemy",
-			"!**/.svelte-kit",
-			"!**/wrangler.jsonc",
-			"!**/.source"
-		]
-	},
-	"formatter": {
+	"$schema": "https://biomejs.dev/schemas/2.3.6/schema.json",
+
+	// General configurations
+	// ----------------------------------------
+
+	"assist": {
 		"enabled": true,
-		"indentStyle": "tab"
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
 	},
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+
+	"files": {
+		"ignoreUnknown": false
+	},
+
+	"formatter": {
+		"enabled": true
+	},
+
 	"linter": {
 		"enabled": true,
 		"rules": {
@@ -62,14 +51,29 @@
 			}
 		}
 	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
-		}
+
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
 	},
+
+	// Language-specific configurations
+	// ----------------------------------------
+
 	"css": {
 		"parser": {
 			"tailwindDirectives": true
+		}
+	},
+
+	"javascript": {
+		"formatter": {
+			"indentStyle": "space",
+			"lineWidth": 80,
+			"quoteStyle": "single",
+			"semicolons": "asNeeded",
+			"trailingCommas": "all"
 		}
 	}
 }
