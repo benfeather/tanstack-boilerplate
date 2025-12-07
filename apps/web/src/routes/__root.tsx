@@ -10,7 +10,7 @@ import {
 } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { Toaster } from '@workspace/client/components/sonner'
-import type { orpc } from '@workspace/client/utils/orpc'
+import type { orpc } from '@/lib/orpc-client'
 import Header from '../components/header'
 
 import appCss from '../index.css?url'

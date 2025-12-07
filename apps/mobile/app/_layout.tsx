@@ -8,7 +8,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { KeyboardProvider } from 'react-native-keyboard-controller'
 import { AppThemeProvider } from '@/contexts/app-theme-context'
 
-import { queryClient } from '@/utils/orpc'
+import { queryClient } from '@/lib/orpc-client'
 
 export const unstable_settings = {
   initialRouteName: '(drawer)',

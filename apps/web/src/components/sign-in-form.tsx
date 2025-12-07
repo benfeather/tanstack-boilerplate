@@ -4,7 +4,7 @@ import { Button } from '@workspace/client/components/button'
 import { Input } from '@workspace/client/components/input'
 import { Label } from '@workspace/client/components/label'
 import { Loader } from '@workspace/client/components/loader'
-import { authClient } from '@workspace/client/utils/auth-client'
+import { authClient } from '@/lib/auth-client'
 import { toast } from 'sonner'
 import z from 'zod'
 

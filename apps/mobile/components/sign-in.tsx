@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native'
 import { authClient } from '@/lib/auth-client'
-import { queryClient } from '@/utils/orpc'
+import { queryClient } from '@/lib/orpc-client'
 
 function SignIn() {
   const [email, setEmail] = useState('')

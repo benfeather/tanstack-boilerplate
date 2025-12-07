@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from '@workspace/client/components/dropdown-menu'
 import { Skeleton } from '@workspace/client/components/skeleton'
-import { authClient } from '@workspace/client/utils/auth-client'
+import { authClient } from '@/lib/auth-client'
 
 export default function UserMenu() {
   const navigate = useNavigate()

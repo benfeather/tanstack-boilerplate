@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { createFileRoute, redirect } from '@tanstack/react-router'
-import { orpc } from '@workspace/client/utils/orpc'
+import { orpc } from '@/lib/orpc-client'
 import { getUser } from '@/functions/get-user'
 
 export const Route = createFileRoute('/dashboard')({

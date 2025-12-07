@@ -2,12 +2,6 @@
 	"name": "@workspace/client",
 	"type": "module",
 	"exports": {
-		".": {
-			"default": "./src/index.ts"
-		},
-		"./auth/*": {
-			"default": "./src/auth/*.ts"
-		},
 		"./components/*": {
 			"default": "./src/components/*.tsx"
 		},

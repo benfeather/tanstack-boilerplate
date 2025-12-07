@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
-import { orpc } from '@workspace/client/utils/orpc'
+import { orpc } from '@/lib/orpc-client'
 
 export const Route = createFileRoute('/')({
   component: HomeComponent,

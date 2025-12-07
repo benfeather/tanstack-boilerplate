@@ -8,44 +8,7 @@ import {
   View,
 } from 'react-native'
 import { authClient } from '@/lib/auth-client'
-import { queryClient } from '@/utils/orpc'
-
-function signUpHandler({
-  name,
-  email,
-  password,
-  setError,
-  setIsLoading,
-  setName,
-  setEmail,
-  setPassword,
-}) {
-  setIsLoading(true)
-  setError(null)
-
-  authClient.signUp.email(
-    {
-      name,
-      email,
-      password,
-    },
-    {
-      onError(error) {
-        setError(error.error?.message || 'Failed to sign up')
-        setIsLoading(false)
-      },
-      onSuccess() {
-        setName('')
-        setEmail('')
-        setPassword('')
-        queryClient.refetchQueries()
-      },
-      onFinished() {
-        setIsLoading(false)
-      },
-    },
-  )
-}
+import { queryClient } from '@/lib/orpc-client'
 
 export function SignUp() {
   const [name, setName] = useState('')
@@ -59,17 +22,32 @@ export function SignUp() {
   const foregroundColor = useThemeColor('foreground')
   const dangerColor = useThemeColor('danger')
 
-  function handlePress() {
-    signUpHandler({
-      name,
-      email,
-      password,
-      setError,
-      setIsLoading,
-      setName,
-      setEmail,
-      setPassword,
-    })
+  function handleSignUp() {
+    setIsLoading(true)
+    setError(null)
+
+    authClient.signUp.email(
+      {
+        name,
+        email,
+        password,
+      },
+      {
+        onError(error) {
+          setError(error.error?.message || 'Failed to sign up')
+          setIsLoading(false)
+        },
+        onSuccess() {
+          setName('')
+          setEmail('')
+          setPassword('')
+          queryClient.refetchQueries()
+        },
+        onFinished() {
+          setIsLoading(false)
+        },
+      },
+    )
   }
 
   return (
@@ -110,7 +88,7 @@ export function SignUp() {
       />
 
       <Pressable
-        onPress={handlePress}
+        onPress={handleSignUp}
         disabled={isLoading}
         className="flex-row items-center justify-center rounded-lg bg-accent p-4 active:opacity-70"
       >

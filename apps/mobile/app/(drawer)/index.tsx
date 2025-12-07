@@ -6,7 +6,7 @@ import { Container } from '@/components/container'
 import { SignIn } from '@/components/sign-in'
 import { SignUp } from '@/components/sign-up'
 import { authClient } from '@/lib/auth-client'
-import { orpc, queryClient } from '@/utils/orpc'
+import { orpc, queryClient } from '@/lib/orpc-client'
 
 export default function Home() {
   const healthCheck = useQuery(orpc.healthCheck.queryOptions())
