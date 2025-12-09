@@ -1,4 +1,3 @@
-import { Link, useNavigate } from '@tanstack/react-router'
 import { Button } from '@workspace/client/components/button'
 import {
   DropdownMenu,
@@ -9,10 +8,12 @@ import {
   DropdownMenuTrigger,
 } from '@workspace/client/components/dropdown-menu'
 import { Skeleton } from '@workspace/client/components/skeleton'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { authClient } from '@/lib/auth-client'
 
 export default function UserMenu() {
-  const navigate = useNavigate()
+  const router = useRouter()
   const { data: session, isPending } = authClient.useSession()
 
   if (isPending) {
@@ -22,7 +23,7 @@ export default function UserMenu() {
   if (!session) {
     return (
       <Button variant="outline" asChild>
-        <Link to="/login">Sign In</Link>
+        <Link href="/login">Sign In</Link>
       </Button>
     )
   }
@@ -44,9 +45,7 @@ export default function UserMenu() {
               authClient.signOut({
                 fetchOptions: {
                   onSuccess: () => {
-                    navigate({
-                      to: '/',
-                    })
+                    router.push('/')
                   },
                 },
               })
